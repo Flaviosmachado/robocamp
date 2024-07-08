@@ -33,6 +33,10 @@ Fill Start Date
         Keyboard Key    press    ${number}
     END
     
+Submit Enroll Form
+    Click    css=button >> text=Salvar
+
+
 
 #Estrategia para pegar um html onde nao aparece no inspecionar
     #${temp}    Get Page Source

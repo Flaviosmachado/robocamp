@@ -13,6 +13,8 @@ Deve Matricular um Aluno
     ...    email=admin@smartbit.com
     ...    pass=qacademy
 
+    Connect To PostGress
+    Delete Enroll    6
 
     Do Login    ${admin}
     Go To Enrolls
@@ -20,6 +22,6 @@ Deve Matricular um Aluno
     Select Student    Falcão Não mexer
     Select Plan       Black
     Fill Start Date    
+    Submit Enroll Form
+    Verify Toaster    Matrícula cadastrada com sucesso
 
-
-    Sleep    5

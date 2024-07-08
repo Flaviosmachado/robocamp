@@ -5,6 +5,7 @@ Resource    components/nav.resource
 Resource    components/toast.resource
 Resource    pages/login.resource
 Resource    pages/enroll.resource
+Resource    database.resource
 
 *** Keywords ***
 #helpers
