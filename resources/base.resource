@@ -5,8 +5,10 @@ Resource    components/nav.resource
 Resource    components/toast.resource
 Resource    pages/login.resource
 Resource    pages/enroll.resource
+
 Resource    database.resource
 Resource    services/sessions.resource
+Resource    services/students.resource
 
 Library    JSONLibrary
 

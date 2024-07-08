@@ -1,9 +1,9 @@
 *** Settings ***
 Documentation    Consumindo a rota services da API REST
 
-Resource   ../base.resource
-
+Resource   ../base.resource    # robotcode: ignore
 Library    RequestsLibrary
+
 
 
 *** Keywords ***
