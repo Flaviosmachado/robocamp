@@ -6,6 +6,8 @@ Resource    components/toast.resource
 Resource    pages/login.resource
 Resource    pages/enroll.resource
 Resource    database.resource
+Resource    services/sessions.resource
+
 Library    JSONLibrary
 
 *** Keywords ***

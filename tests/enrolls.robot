@@ -5,6 +5,11 @@ Documentation    Suite de testes de matriculas de alunos
 Resource    ../resources/base.resource
 
 *** Test Cases ***
+Testando API
+    [Tags]    api
+
+    Get Service Token
+    
 Deve Matricular um Aluno
 
     ${admin}      Get fixture    admin
