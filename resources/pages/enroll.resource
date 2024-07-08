@@ -4,6 +4,10 @@ Documentation    Keywords que reprensentam a pagina de cadastro da matricula
 Library    Browser
 Library    libs/DateTricks.py
 
+#Estrategia para pegar um html onde nao aparece no inspecionar
+    #${temp}    Get Page Source
+    #Log    ${temp}
+
 *** Keywords ***
 Go To Enrolls
     Click    css=a[href="/matriculas"]
@@ -32,14 +36,8 @@ Fill Start Date
     FOR  ${number}  IN  @{start_date}
         Keyboard Key    press    ${number}
     END
-    
-Submit Enroll Form
+
+Submit Enrolls form
     Click    css=button >> text=Salvar
-
-
-
-#Estrategia para pegar um html onde nao aparece no inspecionar
-    #${temp}    Get Page Source
-    #Log    ${temp}
 
     

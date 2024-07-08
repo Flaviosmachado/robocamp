@@ -22,9 +22,21 @@ Select Student Where Email
 
     RETURN    ${result}[0]
 
-Delete Enroll
-    [Arguments]    ${student_id}
+Delete Enroll By email
+
+
+    [Arguments]    ${email}
+
+    ${user}    Select Student Where Email    ${email}
+
     ${query}    Set Variable
-    ...         DELETE FROM enrollments where student_id = ${student_id}
+    ...         DELETE FROM enrollments where student_id = '${user}[0]'
 
     Execute Sql String    ${query}
+
+Reset student enroll
+    [Arguments]        ${mail}  
+
+    Connect To PostGress
+    Delete Enroll By email    ${mail}
+    Disconnect From Database
