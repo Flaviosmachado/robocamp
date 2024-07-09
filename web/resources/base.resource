@@ -11,13 +11,14 @@ Resource    services/sessions.resource
 Resource    services/students.resource
 
 Library    JSONLibrary
+Library    RequestsLibrary
 
 *** Keywords ***
 #helpers
 Do Login
     [Arguments]    ${user}
     Go To Login Page
-    Fill Credentials       ${user}[email]    ${user}[pass]       
+    Fill Credentials       ${user}[email]    ${user}[password]       
     Submit Credentials
     User Should Be Logged In    ${user}[name]
 

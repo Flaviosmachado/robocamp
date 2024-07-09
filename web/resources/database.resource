@@ -34,9 +34,17 @@ Delete Enroll By email
 
     Execute Sql String    ${query}
 
-Reset student enroll
+Delete student by email
+    [Arguments]    ${email}
+
+    ${query}    Set Variable    
+    ...        DELETE FROM students where email = '${email}'
+
+    Execute Sql String    ${query}
+
+Reset student
     [Arguments]        ${mail}  
 
     Connect To PostGress
-    Delete Enroll By email    ${mail}
+    Delete student by email  ${mail}
     Disconnect From Database

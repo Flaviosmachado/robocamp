@@ -1,9 +1,7 @@
 *** Settings ***
 Documentation    Consumindo a rota students da API REST
 
-Resource   ../base.resource    # robotcode: ignore
-Library    RequestsLibrary
-
+Resource    ../base.resource
 
 
 *** Keywords ***
@@ -18,7 +16,3 @@ POST New Student
     ...                    headers=${headers}
     ...                    expected_status=201
     ...                    json=${student}
-
-    ${token}    Log To Console    Bearer ${response.json()}[token]
-
-    RETURN    ${token}

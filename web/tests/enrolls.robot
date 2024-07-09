@@ -4,24 +4,23 @@ Documentation    Suite de testes de matriculas de alunos
 
 Resource    ../resources/base.resource
 
-*** Test Cases ***
-Testando API
-    [Tags]    api
-
-    Get Service Token
-    
+*** Test Cases *** 
 Deve Matricular um Aluno
 
     ${admin}      Get fixture    admin
-    ${student}    Get fixture    student
+    ${falcao}     Get fixture    falcao
 
-    Reset student enroll    ${student}[email]
+    Reset student    ${falcao}[student][email]
+
+     ${token}    Get Service Token    ${admin}
+     POST New Student    ${token}    ${falcao}[student]
+    
     Do Login                ${admin}
 
     Go To Enrolls
     Go To Enroll Form
-    Select Student    ${student}[name]
-    Select Plan       ${student}[enroll][plan]
+    Select Student    ${falcao}[student][name]
+    Select Plan       ${falcao}[enroll][plan]
     Fill Start Date    
     Submit Enrolls form    
     Verify Toaster    Matrícula cadastrada com sucesso

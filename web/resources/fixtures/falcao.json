@@ -1,7 +1,7 @@
 {
     "student": {
         "feet_tall": 1.78,
-        "wiught": 80,
+        "weight": 80,
         "age": 22,
         "email": "falcao@yahoo.com",
         "name": "Falcao dos Santos"
