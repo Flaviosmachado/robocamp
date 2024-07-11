@@ -22,8 +22,9 @@ steps:
 - script: |
     python -m pip install --upgrade pip
     pip install -r requirements.txt
+    rfbrowser init
   displayName: 'Install dependencies'
 
 - script: |
-    robot -d .logs /c/smartbit/repositorio/web/tests/
+    robot -d .logs web/tests/
   displayName: 'Run UI Tests'
