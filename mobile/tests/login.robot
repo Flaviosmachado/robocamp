@@ -1,11 +1,7 @@
 *** Settings ***
 Documentation    Suite de testes de login
 
-Library    AppiumLibrary
 Resource    ../resources/base.resource
-
-Test Setup       Start App
-Test Teardown    Finish App
 
 *** Variables ***
 ${error401}    Acesso não autorizado! Entre em contato com a equipe de atendimento.

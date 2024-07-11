@@ -3,8 +3,18 @@ Documentation    Arquivo principal
 
 Library    AppiumLibrary
 Library    JSONLibrary
+Library    RequestsLibrary
+Library    DateTime
 
 Resource    screens/login.resource
+Resource    screens/help.resource
+Resource    screens/components/popup.resource
+Resource    screens/components/footer.resource
+
+Resource    services/sessions.resource
+Resource    services/students.resource
+Resource    services/enrolls.resource
+Resource    database.resource
 
 *** Keywords ***
 Start App
