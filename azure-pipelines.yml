@@ -27,4 +27,4 @@ steps:
 
 - script: |
     robot -d .logs web/tests/
-  displayName: 'Run UI Tests'
+  displayName: 'Run UI Test'
