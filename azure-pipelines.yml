@@ -25,5 +25,5 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    robot -d .logs /c/smartbit/repositorio/web/tests/
+    robot -d .logs web/tests/
   displayName: 'Run UI Tests'
