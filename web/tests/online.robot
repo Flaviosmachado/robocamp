@@ -3,6 +3,8 @@ Documentation    Verifica se a aplicacao esta online
 
 Library    Browser
 
+Test Teardown    Take Screenshot
+
 *** Test Cases ***
 Portal admin deve estar online
     

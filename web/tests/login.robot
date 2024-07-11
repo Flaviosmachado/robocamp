@@ -4,13 +4,21 @@ Documentation    Suite de testes de autenticacao
 
 Resource    ../resources/base.resource
 
+#Suite Setup        Log    Executado uma unica vez antes de todos os testes
+#Suite Teardown     Log    Executado uma unica vez depois de todos os testes
+
+
+#Test Setup       Log    Executado sempre antes de cada teste
+#Test Teardown    Log    Executado sempre depois de cada teste
+
+Test Teardown    Take Screenshot
 
 *** Test Cases ***
 Login do Administrador
     ${admin}    Create Dictionary
     ...    name=Admin
     ...    email=admin@smartbit.com
-    ...    pass=qacademy
+    ...    password=qacademy
    Do Login    ${admin}
 
 Email nao cadastrado
